@@ -1,0 +1,70 @@
+Anfang 20:30
+Ende 21:30
+
+
+
+For
+	Syntax
+		for(Zählvariable; Wahrheitsüberprüfung; Zählvariable erhöhen){
+			#Code Block
+		}
+	
+		Zählvariable	Muss deklariert werden und Initialisiert werden - d.H int i = 0 ; bei Verschachtelten Schleifen muss pro Schleife eine Zählvariable deklariert werden.
+		Wahrheitsüberprüfung Funktioniert als Abbruchkriterium, wenn die Logische Überprüfung True ist bricht die Schleife ab - z.B i == 10 (i=9) - False
+		Zählvariable erhöhen	Standartmäßig wird i++ oder i +=1 verwendet, sonst kann der Schrittweite genau Eingestellt werden.
+
+		Die Forschleife wird benutzt wen die Anzahl an Durchläufen von Anfang an Absehbar ist wie oft die Schleife durchlaufen wird.
+		
+		
+		Die Zählvariable kann im Code Block verwendet werden.
+		
+		Bsp. Alle Zahle von 1 bis 100 Ausgeben
+		for(int i = 1; i=100; i++){
+			printf(%d, i);
+		}
+		
+		
+While
+	Syntax
+		while(Wahrheitsüberprüfung){
+			#Code Block
+			
+			Zählvariable erhöhen
+		}
+		
+		Wahrheitsüberprüfung Funktioniert als Abbruchkriterium, wenn die Logische Überprüfung True ist bricht die Schleife ab - z.B i  10 (i= 5) == True
+		Zählvariable erhöhen	Standartmäßig wird i++ oder i +=1 verwendet, sonst kann der Schritt genau Eingestellt werden.
+		
+		Die Schleife wird benutz Falls das Abbruchkriterium bekannt ist aber nicht die Genaue Anzahl an durchlaufen.		
+
+		ACHTUNG Falls ein Zählvariable in der Wahrheitsüberprüfung benutzt wird muss diese in der Schleife erhöht werden sonst wird diese zu einer Endlosschleife - Hört nicht auf 
+		
+		Bsp. Alle Zahle von 1 bis 100 Ausgeben
+		int i =1;
+		while(i = 100){
+			printf(i);
+			
+			i += 1;
+		}
+
+Do While
+
+	Syntax
+		do{
+			#Code Block
+			
+			Zählvariable erhöhen
+		}while(Wahrheitsüberprüfung)
+		
+		Wahrheitsüberprüfung Funktioniert als Abbruchkriterium, wenn die Logische Überprüfung True ist bricht die Schleife ab - z.B i  10 (i= 5) == True
+		Zählvariable erhöhen	Standartmäßig wird i++ oder i +=1 verwendet, sonst kann der Schritt genau Eingestellt werden.
+		
+		Die Schleife wird benutz Falls das Abbruchkriterium bekannt ist aber nicht die Genaue Anzahl an durchlaufen. Im Gegensatz zu While Schleife läuft die Do while Schleife mindestens 1 mal durch.
+				
+
+		ACHTUNG Falls ein Zählvariable in der Wahrheitsüberprüfung benutzt wird muss diese in der Schleife erhöht werden sonst wird diese zu einer Endlosschleife - Hört nicht auf 
+		
+		Bsp. Alle Zahle von 1 bis 100 Ausgeben
+		int i =1;
+		while(i = 100){
+			printf(i);
