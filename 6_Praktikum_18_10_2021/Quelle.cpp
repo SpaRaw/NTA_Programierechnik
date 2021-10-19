@@ -22,7 +22,7 @@ void aufgabe_1() {
 	printf("Aufgabe: 1\n\n\n");
 
 	printf("Die Aufgabe wurde auf mehere Artengeloest. Bitte geben sie den Loesungsweg an:\n");
-	printf("Ansatz 1: If(..)else if\nAnsatz 2: Array");
+	printf("Ansatz 1: If(..)else if\nAnsatz 2: Array\n");
 	scanf("%i", &loesungsansatz);
 
 	system("cls");
@@ -115,50 +115,177 @@ void aufgabe_1() {
 		printf("Uups, Ein Fehler ist aufgetreten, dass Programm schliesst sich");
 		printf("Err, invalid choice, choice out of bound");
 	}
+	
 }
 
 void aufgabe_2() {
 	//Loesunf fuer die aufgabe 2
 	for (int j = 0; j < 12; j++) {
 		for (int i = 0; i < 12; i++) {
-			
-			if (j > 1 && i > 1) {
-				if (i * j > 99) {
-					printf(" %i", i * j);
+			//Sonder Fall für J<2 
+			if(j<2){ 
+				//überprüfen ob j=0 oder j =1
+				if(j==0){
+					
+					if(i==0){
+						//Zellblock 0 -> nichts
+						printf("    ");
+					
+					}else if(i == 1){
+						//zellblock 1 -> "  | "
+						printf("  | ");
+					
+					}else{
+						//rest durch i zählen 1-10
+						//überprüfen ob die Zahl eine Stelle oder zwei bednötigt
+						if(i==10+1){
+							printf("  %d", i-1);
+						
+						}else{
+							printf("   %d", i-1);
+							
+						}
+						
+					}
+					
+				}else{
+					//gebe eine Reihe ---- aus 
+					//Ausnahme Zellblock 2 -> "  + "
+					if(i==1){
+						printf("--+-");
+					}else{
+						printf("----");
+					}
 				}
-				else if (i * j > 9) {
-					printf("  %i", i * j);
-				}
-				else {
-					printf("   %i", i * j);
-				}
-			}
-			else {
-
-				if (j == 0 && i == 0) {
-					printf("    ");
-				}
-				else if (i == 1) {
+				
+			}else {
+				//falls j>=2 
+				if(i ==0){
+					//Zellblok 0 -> wert j 
+					if(j==10+1){
+						//überprüfen ob die Zahl zwei stellen braucht
+						printf(" %d ", j-1);
+					
+					}else{
+						printf("  %d ", j-1);
+					}
+				}else if(i==1){
+					//Zellblock 1 -> "  | "
 					printf("  | ");
-				}
-				else {
-					if (i > 9) {
-						printf("  %i", i);
-
+				}else{
+					//zellblock i 2-11 
+					if((i-1)*(j-1)<=9){
+						//wenn ergebnis <10 ->"   %d"
+						printf("   %d", (i-1) * (j-1));
+					
+					}else if ((i-1)*(j-1) >= 100){
+						//wenn ergebnis > 99 -> " %d"
+						printf(" %d", (i-1) * (j-1));
+					
+					}else{
+						//rest ->"  &d"
+						printf("  %d", (i-1) * (j-1));
 					}
-					else {
-						printf("   %i", i);
-					}
-				}
-
+					
+					
+					
+				}		
+				
 			}
 		} 
 		printf("\n");
 	}
+	
 }
 
 void aufgabe_3() {
-
+	/* Im großen und ganzen wurde die Funktionalität von aufgabe 2 übernommen
+		Die Einzige änderung liegt darin, dass der Codeblock, der für die Ausgabe des Einmaleinses
+		um die Überprüfung erweitert wurde ob es sich um eine Quadratzahl handelt
+	*/	
+	
+	for (int j = 0; j < 12; j++) {
+		for (int i = 0; i < 12; i++) {
+			//Sonder Fall für J<2 
+			if(j<2){ 
+				//überprüfen ob j=0 oder j =1
+				if(j==0){
+					
+					if(i==0){
+						//Zellblock 0 -> nichts
+						printf("    ");
+					
+					}else if(i == 1){
+						//zellblock 1 -> "  | "
+						printf("  | ");
+					
+					}else{
+						//rest durch i zählen 1-10
+						//überprüfen ob die Zahl eine Stelle oder zwei bednötigt
+						if(i==10+1){
+							printf("  %d", i-1);
+						
+						}else{
+							printf("   %d", i-1);
+							
+						}
+						
+					}
+					
+				}else{
+					//gebe eine Reihe ---- aus 
+					//Ausnahme Zellblock 2 -> "  + "
+					if(i==1){
+						printf("--+-");
+					}else{
+						printf("----");
+					}
+				}
+				
+			}else {
+				//falls j>=2 
+				if(i ==0){
+					//Zellblok 0 -> wert j 
+					if(j==10+1){
+						//überprüfen ob die Zahl zwei stellen braucht
+						printf(" %d ", j-1);
+					
+					}else{
+						printf("  %d ", j-1);
+					}
+				}else if(i==1){
+					//Zellblock 1 -> "  | "
+					printf("  | ");
+				}else{
+					if(!(i >= j)){
+						//überspring die Zahlen, die nicht auf einer Quadrat basieren
+						printf("    ");
+						
+					}else{
+							//zellblock i 2-11 
+						if((i-1)*(j-1)<=9){
+							//wenn ergebnis <10 ->"   %d"
+							printf("   %d", (i-1) * (j-1));
+						
+						}else if ((i-1)*(j-1) >= 100){
+							//wenn ergebnis > 99 -> " %d"
+							printf(" %d", (i-1) * (j-1));
+						
+						}else{
+							//rest ->"  &d"
+							printf("  %d", (i-1) * (j-1));
+						}
+					}
+					
+					
+					
+				}		
+				
+			}
+		} 
+		printf("\n");
+	}
+	
 }
 
 int main() {
@@ -169,7 +296,7 @@ int main() {
 
 	printf("\n\n\n");
 
-	printf("Aufgabe 1: Eingabe Zahlen nach Groesse sortieren\nAufgabe 2: kleine Einmaleins\nAufgabe 3: Andere art des Einmaleinses");
+	printf("Aufgabe 1: Eingabe Zahlen nach Groesse sortieren\nAufgabe 2: kleine Einmaleins\nAufgabe 3: Andere art des Einmaleinses\n");
 	printf("Gebe die Aufgaben Nummer ein: ");
 	scanf("%i", &aufgaben_nummer);
 
@@ -184,7 +311,6 @@ int main() {
 		printf("Err, invalid choice, choice out of bound");
 	}
 
-	printf("Press enter to close the Programm");
-	getchar();
+	
 	return 1;
 }
