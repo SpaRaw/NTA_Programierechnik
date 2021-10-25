@@ -1,0 +1,30 @@
+Variablen Deklaration:
+	float-> summe, mittel_wert = 0.0
+	int anz_zahlen  =0 
+	
+	
+Benutzer eingabe:
+	%d -> anz_zahlen
+
+Benutzer eingabe überprüfen:
+	wenn anz_zahlen  > 0 
+
+		Berechnung:
+		int i = 0
+		float temp_zahl;
+		mache:
+			Ausgabe:
+				"Bitte die %d. Kommazahl eingeben: ", i+1
+			Eingabe :
+				%f -> temp_zahl
+			summe = summe + temp_zahl;
+			
+			i erhöhen
+		solange i < anz_zahlen  
+		
+		mittel_wert = summe / anz_zahlen 
+
+
+Ausgabe:
+	"Die Summe ist : %.2f", Summe
+	"Der Mittelwert ist: %.2f", mittel_wert 

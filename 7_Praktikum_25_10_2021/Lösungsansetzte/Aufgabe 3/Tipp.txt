@@ -1,0 +1,6 @@
+Das Abbruchkriterium der Schleife wird vom Benutzer eingegeben
+
+Man kan die Summe in einer anderen Varible zwischen Speichern
+
+
+

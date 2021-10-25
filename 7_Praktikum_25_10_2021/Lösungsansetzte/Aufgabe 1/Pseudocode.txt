@@ -1,0 +1,23 @@
+Variablen Deklaration:
+	double -> z1, z2, Ergebnis
+	char -> Operator
+
+Benutzer eingabe:
+	%lf -> z1
+	%c -> Operator
+	%lf -> z2 
+
+
+Berechnung:
+	switch(Operator){
+		Wenn + : Ergebnis = z1 + z2
+		Wenn - : Ergebnis = Z1- Z2
+		Wenn / : Ergebnis = Z1 / Z2
+		Wenn * : Ergebnis = Z1 * Z2 
+
+		Standart: "Fehler bei eingabe"
+	}
+
+
+Ausgabe:
+	"Das Ergebnis ist %.4f", Ergebnis

@@ -1,0 +1,4 @@
+Mit einer Switch Anweisung muss nicht unbedingt eine Zahl überprüft werden.
+Es gehen auch Buchstaben.
+
+Was für ein Datebtyp braucht man im scanf ?

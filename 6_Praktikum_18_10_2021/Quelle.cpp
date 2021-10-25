@@ -73,6 +73,13 @@ void aufgabe_1() {
 		else {
 			kleinste = z3;
 		}
+		
+		if(groesste ==0){
+			groesste = mittel;
+		}else if (groesste == 0 && mittel == 0){
+			groesste = kleinste;
+			mittel = kleinste ;
+		}
 
 		printf("Die Eingegebenen Zahlen nach der groessse angeordnet: %d, %d, %d", kleinste, mittel, groesste);
 		break;
@@ -119,9 +126,13 @@ void aufgabe_1() {
 }
 
 void aufgabe_2() {
+	
+	int anz_number=10;
+	int schleife_max= anz_number +2 ;
 	//Loesunf fuer die aufgabe 2
-	for (int j = 0; j < 12; j++) {
-		for (int i = 0; i < 12; i++) {
+	
+	for (int j = 0; j < schleife_max; j++) {
+		for (int i = 0; i < schleife_max; i++) {
 			//Sonder Fall für J<2 
 			if(j<2){ 
 				//überprüfen ob j=0 oder j =1
