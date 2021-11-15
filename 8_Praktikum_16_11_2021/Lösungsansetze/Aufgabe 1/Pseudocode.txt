@@ -1,0 +1,29 @@
+Variablen Deklaration:
+	int-> zufallszahl, eingabe, versuche=0
+	bool -> nicht_erraten=true
+	
+	srand()
+	zufallszahl = rand()
+
+
+Mache
+	Benutzer eingabe:
+	%i -> eingabe
+	}
+	
+	wenn eingabe < zufallszahl:
+		Ausgabe:
+		"zu Gross"
+	wenn den eingabe > zufallszahl:
+		Ausgabe:
+		"zu Klein
+	dann:
+		Ausgabe:
+		"Erraten"
+		erraten= true
+
+Solange: versuche < 6
+
+Ausgabe:
+	wenn nicht_erraten:
+		" Verloren Die Zufalszahl wurde nicht erraten: ", zufallszahl
