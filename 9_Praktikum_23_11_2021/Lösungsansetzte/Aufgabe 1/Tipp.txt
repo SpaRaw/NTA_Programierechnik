@@ -1,0 +1,3 @@
+Zählvariable für Zugriff benutzen.
+
+Schleife  Runterzählen lassen 

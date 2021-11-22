@@ -20,7 +20,7 @@ Mache
 	dann:
 		Ausgabe:
 		"Erraten"
-		erraten= true
+		nicht_erraten=false
 
 Solange: versuche < 6
 

@@ -1,0 +1,16 @@
+Variablen Deklaration:
+	char -> str[]
+
+Berechnung:
+	Für i=0 , i Kleiner Länge str , i ++
+		Wenn str[i] Gleich E
+			str[i] ist e
+		Wenn str[i] Gleich N
+			str[i] ist n
+Ausgabe:
+	"%s", str
+
+Umdrehen:
+	Für i=Länge st , i Größer Gleich 0 , i --
+	Ausgabe:
+		"%c", str[i]
