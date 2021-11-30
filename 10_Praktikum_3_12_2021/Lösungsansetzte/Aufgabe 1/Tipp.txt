@@ -1,0 +1,5 @@
+Eingelesenen String als Array Behandeln
+
+eine Zählvariable bis zum erreichen des String endes Erhöhen
+
+Gibt es eine Funktion, die das schon kann

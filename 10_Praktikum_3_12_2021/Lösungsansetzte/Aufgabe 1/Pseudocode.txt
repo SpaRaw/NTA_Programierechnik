@@ -1,0 +1,12 @@
+Variablen Deklaration:
+	char -> str[9]
+	int -> anz
+
+Eingabe:
+	"%s" -> str
+
+Berechnung:
+	Solange str[anz] nicht \0:
+		erhöhe anz um eins
+Ausgabe:
+	"Die Anzahl ist %i", anz 
