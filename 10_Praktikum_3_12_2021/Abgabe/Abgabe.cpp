@@ -5,82 +5,132 @@
 
 void aufgabe_1() {
 	system("cls");
-	printf("Aufgabe 1: str[] bearbeiten\n\n\n");
+	printf("Aufgabe 1: Länge Eines String\n\n\n");
 	
-	char str[11]= "Ein Nenner";
-	printf("%s\n", str);
+	char arr[9];
+	int anz_char=0;
 	
-	for(int i = 0; i<sizeof(str); i++){
-		if(str[i]== 'E'){
-			str[i]= 'e';
-		}
-		if(str[i]== 'N'){
-			str[i]= 'n';
-		}
+	printf("Gib eine Zeichen Kette ein(Max: 9 Zeichen): ");
+	scanf("%s", &arr);
+	
+	while(arr[anz_char] != '\0' ){
+		anz_char++;
 	}
 	
-	printf("\n%s\n",str);
-	
-	for(int i = sizeof(str)-2; i>=0; i--){
-		printf("%c", str[i]);
-	}
-
-	getchar();
-	return 1;
+	int length = strlen(arr);
+	printf("\nDie Zeichenkette hat %i Zeichen, laut strlen", length);
+	printf("\nDie Zeichenkette hat %i Zeichen, laut while schleife",anz_char);
 	
 }
 
 void aufgabe_2() {
 	system("cls");
-	printf("Aufgabe 2: Unterschiede\n\n\n");
+	printf("Aufgabe 2: Zeiger Erstellen\n\n\n");
 	
-	char str1[9];
-	char str2[9];
-	char unterschiede[9];
-	int max_len;
+	int a = 1;
+	double b = 1.5;
+	char c = 'a';
 	
-	printf("Achtung: Die Eingabe darf maximal 9 Zeichen Lang sein und darf kein Leerzeichen enthalten");
+	int *point_to_a = &a;
+	double *point_to_b = &b;
+	char *point_to_c= &c;
 	
-	printf("\nErster String: ");
-	scanf("%s", str1);
+	printf("int: %i", *point_to_a);
+	printf("\ndouble: %lf", *point_to_b);
+	printf("\nchar: %c", *point_to_c);
 	
-	printf("\nZweiter String: ");
-	scanf("%s", str2);		
-	
-	if(strlen(str1) < strlen(str2)){
-		max_len = strlen(str1);
-	}else{
-		max_len = strlen(str2);
-	}
-	
-	
-	for(int i = 0; i<max_len;i++){
-		if(str1[i] == str2[i]){
-		}else{
-			
-			unterschiede[i] = str2[i];
-			printf("\n%c %c %d unter %c",str1[i], str2[i], i, unterschiede[i]);
+}
 
-		}
-		
-	}
+void aufgabe_3() {
+	system("cls");
+	printf("Aufgabe 3: Adresse asugeben\n\n\n");
 	
+	int a = 1;
+	double b = 1.5;
+	char c = 'a';
+	int n;
 	
-	printf("\nDie Unterschiede %s", unterschiede);
+	int *point_to_a = &a;
+	int *point_to_n = &n;
+	double *point_to_b = &b;
+	char *point_to_c= &c;
+	
+	point_to_n = NULL;
+	
+	printf("int: %i", *point_to_a);
+	printf("\nadresse a: %p", *point_to_a);
+	printf("\nNull: %i", *point_to_n);
+	printf("\nadresse n: %p", point_to_a);
+	printf("\ndouble: %lf", *point_to_b);
+	printf("\nadresse b: %p", point_to_b);
+	printf("\nchar: %c", *point_to_c);
+	printf("\nadresse c: %p", point_to_c);
 	
 	
 }
+
+void aufgabe_4() {
+	system("cls");
+	printf("Aufgabe 4: Pointer Üben\n\n\n");
+	
+	int a = 1;
+	double b = 1.5;
+	char c = 'a';
+	
+	int *point_to_a = &a;
+	double *point_to_b = &b;
+	char *point_to_c= &c;
+	
+	printf("int: %i", *point_to_a);
+	printf("\ndouble: %lf", *point_to_b);
+	printf("\nchar: %c", *point_to_c);
+	
+	*point_to_a = 5;
+	*point_to_b = 2.5;
+	*point_to_c = 'b';
+	
+	printf("\nNeuer Wert a: %d", a);
+	printf("\nNeuer Wert b: %lf", b);
+	printf("\nNeuer Wert c: %c", c);
+	
+	a = 2;
+	b = 3.1415;
+	c = 'x';
+	
+	printf("\nNeuer Wert a: %d", *point_to_a);
+	printf("\nNeuer Wert b: %lf", *point_to_b);
+	printf("\nNeuer Wert c: %c", *point_to_c);
+	
+	
+}
+
+void aufgabe_5() {
+	system("cls");
+	printf("Aufgabe 5: Zeiger Bigen\n\n\n");
+	
+	int arr[]={0,1,2,3,4,5,6,7,8,9};
+	int *pointer = arr;
+	int *rev_pointer= &arr[9];
+	
+	for(int i = 0; i<10; i++){
+		printf("pointer + %i= %i\n", i, *(pointer + i));
+		printf("rev_pointer +%i= %i\n", i, *(rev_pointer -i));
+	}
+	
+	
+}
+
 
 
 int main() {
 
 	int aufgaben_nummer = 0;
 
-	printf("Programiertechnik Praktikum\nEinheit: 8 \nGruppe: B\nDatum: 19.11.2021");
+	printf("Programiertechnik Praktikum\nEinheit: 10 \nGruppe: B\nDatum: 03.12.2021");
 
 	printf("\n\n\n");
 
-	printf("Aufgabe 1: str[] bearbeiten\nAufgabe 2: Unterschiede\n");
+	printf("Aufgabe 1: Länge Eines String\nAufgabe 2: Zeiger Erstellen\nAufgabe 3:Adresse asugeben\n Aufgabe 4:Pointer Üben\n Aufgabe 5: Zeiger Bigen");
 	printf("Gebe die Aufgaben Nummer ein: ");
 	scanf("%i", &aufgaben_nummer);
 
@@ -89,6 +139,9 @@ int main() {
 	switch (aufgaben_nummer) {
 	case 1: aufgabe_1(); break;
 	case 2: aufgabe_2(); break;
+	case 3: aufgabe_2(); break;
+	case 4: aufgabe_2(); break;
+	case 5: aufgabe_2(); break;
 	default:
 		printf("Uups, Ein Fehler ist aufgetreten, dass Programm schliesst sich");
 		printf("Err, invalid choice, choice out of bound");

@@ -14,5 +14,6 @@ int main(){
 	printf("int: %i", *point_to_a);
 	printf("\ndouble: %lf", *point_to_b);
 	printf("\nchar: %c", *point_to_c);
+	
 	return 1;
 }

@@ -13,7 +13,7 @@ int main(){
 	double *point_to_b = &b;
 	char *point_to_c= &c;
 	
-	//point_to_n = NULL;
+	point_to_n = NULL;
 	
 	printf("int: %i", *point_to_a);
 	printf("\nadresse a: %p", *point_to_a);
