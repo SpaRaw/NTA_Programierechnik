@@ -1,0 +1,2 @@
+int func( int parameter)
+	ergebnis = parameter +1 * parameter / 2 

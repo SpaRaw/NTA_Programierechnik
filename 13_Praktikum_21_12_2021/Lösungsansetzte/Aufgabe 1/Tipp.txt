@@ -1,0 +1,3 @@
+Wie viele Variabeln werden in der Function gebraucht ? 
+
+Gibt es etwas was Zwischen Gespeichert werden muss

@@ -1,0 +1,8 @@
+void funcion( int parameter1, int parameter2)
+	temp -> parameter1 
+
+	parameter1 -> parameter 2
+	
+	paramete2 -> temp 
+
+
