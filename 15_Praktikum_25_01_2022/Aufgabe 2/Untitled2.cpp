@@ -39,7 +39,8 @@ int main(){
 }
 
 void matrixAdd2(int* a, int* b, int* c, int zeilen, int spalten){
-	for(int i = 0; i < zeilen * spalten ; i++){
-		c[i] = a[i] + b[i];
-	}
+		for(int i = 0; i< zeilen*spalten; i++){
+			*(c + i) = *(a + i)+ *(b + i);
+		}
 }
+	

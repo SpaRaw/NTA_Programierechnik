@@ -1,7 +1,7 @@
 #include<stdio.h>
 #include<stdlib.h>
 
-void matrixAdd(int a[3][4], int b[3][4], int c[3][4], int zeilen, int spalten){
+void matrixAdd(int a[][4], int b[][4], int c[][4], int zeilen, int spalten){
 	for(int i = 0; i< zeilen; i ++){
 		for(int n = 0; n < spalten; n ++){
 			c[i][n] = a[i][n] + b[i][n];
@@ -13,26 +13,26 @@ void aufgabe_1() {
 	system("cls");
 	printf("Aufgabe 1: Lösen einer Matrix mit Call By Value\n\n\n");
 	
-		int Zeile = 3;
-	int Spalte = 4
+	int Zeile = 3;
+	int Spalte = 4;
 	
-	int a[Zeile][Spalte] = {
+	int a[3][4] = {
 		{2, 2, 2, 2},
 		{2, 2, 2, 2},
 		{2, 2, 2, 2},
 	} ;
-	int b[Zeile][Spalte] = {
+	int b[3][4] = {
 		{3, 3, 3, 3},
 		{3, 3, 3, 3},
 		{3, 3, 3, 3},
 	} ;
-	int c[Zeile][Spalte] = {
+	int c[3][4] = {
 		{-1, -1, -1, -1},
 		{-1, -1, -1, -1},
 		{-1, -1, -1, -1},
 	} ;
 	
-	matrixAdd( a, b, c, Zeile, Spalte);
+	matrixAdd(a, b, c, Zeile, Spalte);
 	
 	for(int i = 0; i< Zeile; i ++){
 		for(int n = 0; n < Spalte; n ++){
